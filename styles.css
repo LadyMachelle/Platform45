@@ -1,0 +1,428 @@
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: HelveticaNeue;
+  font-size: 2.25em;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #383838;
+}
+
+h1 {
+  margin: auto;
+  font-size: 1em;
+}
+
+h2 {
+  margin: 2em 6em;
+  font-size: 0.5em;
+  line-height: 1.53;
+  font-weight: lighter;
+}
+
+h3 {
+  width: 40%;
+  margin: 5% 40%;
+  font-size: 0.75em;
+  text-align: left;
+  color: #383838;
+}
+
+/* styles for main container */
+.container {
+  display: flex;
+  justify-content: left;
+  margin: 2%;
+  height: 90vh;
+  min-height: 620px;
+  border-radius: 42.5px;
+  background-color: #ffffff;
+  box-shadow: 0em 0em 1.875em #f5f8f9;
+}
+
+/* styles for side panel */
+.left-section {
+  border-radius: 42.5px 0 0 42.5px;
+  width: 40%;
+  height: 90vh;
+  min-height: 620px;
+  background-color: #ffd500;
+  z-index: 3;
+}
+
+/* image style */
+.user-image {
+  margin: 1.6em auto 1em;
+  width: 6em;
+  height: 6em;
+  object-fit: contain;
+}
+
+/* styles for the slide content */
+.slide-content {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  left: 21%;
+  width: 0%;
+  height: 90vh;
+  min-height: 620px;
+  border-radius: 42.5px;
+  background-color: #ff9200;
+  transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+
+/* shows the slide */
+.show-slide {
+  width: 77%;
+}
+
+/* style for slide paragraph */
+.slide-paragraph {
+  width: 40%;
+  margin: 0 40%;
+  font-size: 0.4em;
+  line-height: 1.53;
+  text-align: left;
+  color: #383838;
+}
+
+.circle {
+  display: block;
+  height: 1.67em;
+  width: 1.67em;
+  background-color: #383838;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-top: 0.4em;
+  transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+}
+
+/*rotate button when clicked */
+.arrow-button-rotate {
+  transform: rotate(180deg);
+}
+
+/* form styles */
+.form-display {
+  font-size: 0.35em;
+  text-align: left;
+  color: #373d40;
+  vertical-align: middle;
+  min-height: 620px;
+  margin: 0 auto;
+  padding-top: 4em;
+}
+
+.form-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 0.1em 0.5em;
+  padding: 1em;
+  width: 100%;
+}
+
+.form-layout label {
+  margin: auto 0.7em;
+}
+
+input:focus {
+  outline: none !important;
+}
+input:focus,
+textarea:focus {
+  border: 1px solid #b1bfcd !important;
+}
+
+/* Change input style */
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+  font-family: HelveticaNeue;
+  font-weight: 500;
+  color: #373d40;
+  background-color: rgba(245, 248, 249, 0.3);
+  width: 100%;
+  padding: 1em 0.6em;
+  margin: 0.6em;
+  cursor: pointer;
+  border: solid 1px #cad7dd;
+  border-radius: 5.3px;
+  box-sizing: border-box;
+  border: solid 1px transparent;
+  -webkit-transition: all 250ms ease-in;
+  -moz-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+}
+
+::placeholder {
+  color: #b1bfcd;
+}
+
+input[type="date"] {
+  color: #b1bfcd;
+  background: url(img/Calendar.svg) no-repeat 98%;
+  background-color: rgba(245, 248, 249, 0.3);
+}
+
+/* remove default calendar image */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* hide radio */
+[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* checked styles */
+[type="radio"] + img {
+  cursor: pointer;
+}
+
+.radio-label-color {
+  color: #b1bfcd;
+}
+
+/* remove default radio buttons */
+.form-radio-group input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.radio-selectors {
+  padding: 1em 0em 1em 0em;
+  width: 100%;
+}
+
+/* default radio button images */
+.male {
+  background: url(img/male.svg);
+}
+
+.female {
+  background: url(img/female.svg);
+}
+
+.classic,
+.silver,
+.gold {
+  background: url(img/Card.svg);
+}
+
+/*group radio buttons with text */
+span {
+  display: inline-block;
+  padding: 0.6em 0;
+}
+
+label {
+  vertical-align: middle;
+}
+
+/* default styles for radio buttons */
+.gender,
+.membership {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 1.2px solid transparent;
+}
+
+/* change image if radio button is checked */
+.form-radio-group input:checked + .male {
+  background: url(img/male--white.svg);
+}
+
+.form-radio-group input:checked + .female {
+  background: url(img/female--white.svg);
+}
+
+.form-radio-group input:checked + .classic {
+  background: url(img/Card--white.svg);
+}
+
+.form-radio-group input:checked + .silver {
+  background: url(img/Card--white.svg);
+}
+
+.form-radio-group input:checked + .gold {
+  background: url(img/Card--white.svg);
+}
+
+/* add styles if radio button is checked */
+.form-radio-group input:checked + .male,
+.form-radio-group input:checked + .female,
+.form-radio-group input:checked + .classic,
+.form-radio-group input:checked + .silver,
+.form-radio-group input:checked + .gold {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center;
+  background-color: #b1bfcd;
+  -webkit-transition: background-color 250ms ease-in;
+  -moz-transition: background-color 250ms ease-in;
+  transition: background-color 250ms ease-in;
+}
+
+/* style buttons for form */
+.button {
+  margin: 1em 0.2em;
+  width: 10em;
+  height: 3em;
+  border-radius: 5.3px;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.cancel-button {
+  background-color: #f5f8f9;
+  color: #373d40;
+  border: none;
+  cursor: pointer;
+  margin-left: 83px;
+}
+
+.save-button {
+  background-color: #49c8a8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+/* changes layout for tablets and phones */
+@media only screen and (max-width: 1024px) {
+  body {
+    margin: 0;
+  }
+  h1 {
+    padding: 5px;
+  }
+  h2 {
+    margin: 2em 2em;
+  }
+  /* change display to fit screen */
+  .container,
+  .left-section,
+  .form-layout {
+    display: block;
+    border-radius: 0;
+    margin: 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  /* rotate button to point down */
+  .toggle-button {
+    transform: rotate(90deg);
+  }
+  /*change column to 1 */
+  .form-layout {
+    grid-template-columns: 1fr;
+    grid-gap: 1.1em 0.5em;
+    /* padding: 1.4em; */
+    width: 90%;
+  }
+
+  .form-display {
+    background-color: transparent;
+    padding-top: 1em;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .cancel-button {
+    margin-left: 0em;
+  }
+
+  /*change slide for smaller screen sizes */
+  .radio-selectors {
+    padding: 0.5em 0em 0em 0em;
+  }
+  .slide-content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 0;
+  }
+  /* shows the slide */
+  .show-slide {
+    height: auto;
+  }
+  .left-section {
+    height: 0em;
+  }
+  /* style for slide paragraph */
+  h3,
+  .slide-paragraph {
+    width: 80%;
+    margin: 5% 5%;
+  }
+  .slide-paragraph {
+    padding-bottom: 100%;
+  }
+  /*rotate button to face up */
+  .display-button-rotate {
+    transform: rotate(-90deg);
+  }
+}
